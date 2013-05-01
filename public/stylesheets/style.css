@@ -216,7 +216,8 @@ nav {
 /*************************  CONTENT  *************************/
 
 #wrapper {
-    width: 1000px;
+    height: auto;
+    width: auto;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -262,7 +263,7 @@ aside {
     border-radius: 3px;
     box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3);
 
-    float: right;
+    float: none;
     padding: 20px;
     width: 200px;
 }
@@ -272,7 +273,7 @@ aside {
 /********************  FOOTER PROPERTIES  ********************/
 
 footer {
-    height: 120px;
+    height: 60px;
     clear: both;
     width: 100%;
     margin: 0 auto;
