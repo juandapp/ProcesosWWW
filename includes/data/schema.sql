@@ -26,7 +26,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `TheProcessSocialNetwork`.`User` (
   `idUser` INT NOT NULL AUTO_INCREMENT ,
-  `usermane` VARCHAR(45) NULL ,
+  `username` VARCHAR(45) NULL ,
   `password` VARCHAR(45) NULL ,
   `name` VARCHAR(45) NULL ,
   `email` VARCHAR(45) NULL ,
@@ -199,6 +199,9 @@ ENGINE = InnoDB;
 
 USE `TheProcessSocialNetwork` ;
 
+
+INSERT INTO `theprocesssocialnetwork`.`user` (`idUser`, `username`, `password`, `name`, `email`, `last_name`, `creation_date`)
+    VALUES (NULL, 'gustavo', 'gustavo', 'gustavo', 'gustavo@gustavo.com', 'gustavo', NULL);
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

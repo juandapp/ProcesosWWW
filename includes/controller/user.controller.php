@@ -1,25 +1,31 @@
-<?php require_once('../config/config.inc.php'); ?>
-<?php require_once('../data/mysqldatabase.php'); ?>
-<?php include_once('../model/user.model.php'); ?>
 <?php
+require_once("../initialize.php");
 
-
-
-
-// Check the querystring for a numeric id
-if (isset($_POST['idUser']) && intval($_POST['idUser']) > 0) {
-	
-	// Get id from querystring
-	$idUser = $_POST['idUser'];
-	
-	// Execute database query
-	$user = User::find_by_id($idUser);
-	
-} else {
-	// Redirect to site root
-	//redirect_to('.');
+if($session->is_logged_in()) {
+  redirect_to("index.php");
 }
 
-require_once('../view/userShow.view.php');
+// Remember to give your form's submit tag a name="submit" attribute!
+if (isset($_POST['login'])) { // Form has been submitted.
 
-?>
+  $username = trim($_POST['username']);
+  $password = trim($_POST['password']);
+  
+  // Check database to see if username/password exist.
+	$found_user = User::authenticate($username, $password);
+	
+  if ($found_user) {
+    $session->login($found_user);
+    echo 'Bien';
+    //redirect_to("index.php");
+  } else {
+    // username/password combo was not found in the database
+    $message = "Username/password combination incorrect.";
+    
+    echo $message;
+  }
+  
+} else { // Form has not been submitted.
+  $username = "";
+  $password = "";
+}

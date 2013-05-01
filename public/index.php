@@ -7,7 +7,7 @@
     <section id="main">
 
         <aside id="login">
-            <form action="login.php">
+            <form action=../includes/controller/user.controller.php method="post">
                 <h3>Login</h3>
                 <div>
                     <input type="text" placeholder="Usuario" required="" name="username" id="username" />
@@ -16,12 +16,11 @@
                     <input type="password" placeholder="Password" required="" name="password" id="password" />
                 </div>
                 <div>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Login" name="login" />
                 </div>
             </form>
         </aside>
-
-    </section><!-- end of main -->
-</div><!-- end of wrapper -->
+    </section>
+</div>
 
 <?php include_layout_template('footer.php'); ?>
