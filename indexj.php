@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once('config/config.inc.php'); ?>
+<?php require_once("/includes/initialize.php"); ?>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
