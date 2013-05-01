@@ -1,0 +1,149 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+}
+
+header {
+	border: solid 1px #000;
+	background: url(banner.png);
+}
+
+nav {
+	border: solid 1px #000;
+	box-shadow: 0 10px 10px rgba(50, 50, 50, 0.3);
+
+	background: #eee;
+	background: -moz-linear-gradient(top, #777 0%, #333 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#777), color-stop(100%,#333));
+	background: -webkit-linear-gradient(top, #777 0%,#333 100%);
+	background: -o-linear-gradient(top, #777 0%,#333 100%);
+	background: -ms-linear-gradient(top, #777 0%,#333 100%);
+	background: linear-gradient(top, #777 0%,#333 100%);
+	
+}
+
+
+nav > ul > li {
+	list-style: none;
+	display: inline; /* puts as horizontal blocks*/
+	margin: 1px;
+	position: relative;
+}
+
+
+nav > ul > li > a {
+	text-decoration: none;
+	padding: 15px;
+	color: #ddd;
+	font: 15px sans-serif;
+	text-shadow: 0px 1px 1px rgba(0,0,0, .3) inset;
+	
+}
+
+
+nav li > a:hover {
+	color: #3e5706;
+	text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+	
+	/*background: url(../img/active.png) repeat-x;*/
+	background: #eee;
+	background: -moz-linear-gradient(top,  #eee 0%, #ccc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eee), color-stop(100%,#ccc));
+	background: -webkit-linear-gradient(top,  #eee 0%,#ccc 100%);
+	background: -o-linear-gradient(top,  #eee 0%,#ccc 100%);
+	background: -ms-linear-gradient(top,  #eee 0%,#ccc 100%);
+	background: linear-gradient(top,  #eee 0%,#ccc 100%);
+
+	box-shadow: inset 2px 2px 4px 1px rgba(2, 2, 2, 0.6);
+}
+
+
+nav li ul{
+	position: absolute;
+	list-style: none;
+	text-align: center;
+	width: 180px;
+	margin-left: -70px;
+	top: 30px;
+	font: bold 12px sans-serif;
+
+	/* Show Hide */
+	max-height: 0px;
+	overflow: hidden; /* hides the text */
+
+	-webkit-transition: max-height 0.4s linear;
+	-moz-transition: max-height 0.4s linear;
+	transition: max-height 0.4s linear;
+}
+
+
+nav li:hover ul{
+	max-height: 200px; /*text height manually*/
+}
+
+
+nav li ul li{
+	background-color: #313131;
+}
+
+
+nav li ul li a{
+	padding: 12px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+
+nav li ul li:nth-child(odd){ /*zebra style*/
+	background-color: #404040;
+}
+
+
+nav li ul li:hover{
+	background-color: #555;
+}
+
+
+nav li ul li:first-child{
+	border-radius: 5px 5px 0 0;
+	margin-top: 25px;
+	position: relative;
+}
+
+
+nav li ul li:first-child:before{ /*pointer*/
+	content: ''; /* draw the pointer*/
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border: 15px solid transparent;
+	border-bottom-color: #404040;
+	margin-left: -15px;
+	top: -30px;
+}
+
+
+nav li ul li:last-child{
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div {
+	background-color: #ccf;
+	border: solid 1px #000;
+}
+

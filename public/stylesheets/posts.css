@@ -1,0 +1,49 @@
+
+.postTitle {
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3);
+
+	float: left;
+	width: 90%;
+}
+
+
+#titleSection {
+	float: left;
+	position: relative;
+	width: 85%;
+}
+
+
+.titleSeparator {
+	float: left;
+	position: relative;
+	width: 1px;
+	height: 9%;
+	margin: 0 10px;
+	background-color: #aaa;
+}
+
+
+#userInformation {
+	float: right;
+	position: relative;
+	padding: 4px;
+	width: 10%;
+}
+
+
+.postContent{
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.3);
+
+	float: left;
+	width: 90%;
+}
+

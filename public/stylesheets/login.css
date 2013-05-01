@@ -1,3 +1,12 @@
+/*  Sacado de: http://cssdeck.com/labs/login-form-using-html5-and-css3
+
+	Nombre: login.css
+	Autor: Giancarlo Quevedo
+	Creado: 29 Abr 2013
+	Ultima Mod: 29 Abr 2013
+*/
+
+
 form:after {
 	content: ".";
 	display: block;
@@ -25,7 +34,7 @@ form:after {
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
-	width: 300px;
+	width: 240px;
 }
 
 #login h3 {
