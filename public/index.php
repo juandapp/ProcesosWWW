@@ -17,8 +17,6 @@
                 </div>
                 <div>
                     <input type="submit" value="Submit" />
-                    <!-- a href="#">Lost your password?</a>
-                    <a href="#">Register</a -->
                 </div>
             </form>
         </aside>

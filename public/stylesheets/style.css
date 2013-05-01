@@ -208,7 +208,8 @@ nav {
 /*************************  CONTENT  *************************/
 
 #wrapper {
-    width: 1000px;
+    height: auto;
+    width: auto;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
