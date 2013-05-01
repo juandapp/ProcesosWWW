@@ -2,6 +2,7 @@
     <head>
         <link rel='stylesheet' href="../stylesheets/style.css">
         <link rel='stylesheet' href="../stylesheets/profile.css">
+        <script></script>
     </head>
     <body>
 
@@ -16,7 +17,7 @@
                 </div>
 
                 <div class="navRightItem">
-                    <a class="navIcon" href="#">perfil</a>
+                    <a class="navIcon" href="#">Perfil</a>
 
                     <div class="navVerticalDivision"></div>
 
