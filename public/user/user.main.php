@@ -9,8 +9,10 @@ if (!$session->is_logged_in()) {
     <head>
         <link rel='stylesheet' href="../stylesheets/style.css">
         <link rel='stylesheet' href="../stylesheets/profile.css">
+        <script type="text/javascript" src="../javascripts/user.js"></script>
     </head>
     <body>
+        
 
 <?php include_layout_template('navigationUser.php'); ?>
 

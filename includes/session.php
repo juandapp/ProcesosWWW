@@ -11,7 +11,7 @@ class Session {
     public $user_id;
 
     function __construct() {
-
+        
         session_start();
         $this->check_login();
         if ($this->logged_in) {
