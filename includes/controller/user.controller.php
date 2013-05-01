@@ -2,7 +2,7 @@
 require_once("../initialize.php");
 
 if($session->is_logged_in()) {
-  redirect_to("index.php");
+  //redirect_to("index.php");
 }
 
 // Remember to give your form's submit tag a name="submit" attribute!
@@ -16,8 +16,7 @@ if (isset($_POST['login'])) { // Form has been submitted.
 	
   if ($found_user) {
     $session->login($found_user);
-    echo 'Bien';
-    //redirect_to("index.php");
+    redirect_to(SITE_ROOT.'public'.DS.'user.main.php');
   } else {
     // username/password combo was not found in the database
     $message = "Username/password combination incorrect.";
