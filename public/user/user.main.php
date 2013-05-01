@@ -4,7 +4,15 @@ if (!$session->is_logged_in()) {
     redirect_to("login.php");
 }
 ?>
-<?php include_layout_template('headerUser.php'); ?>
+
+<html>
+    <head>
+        <link rel='stylesheet' href="../stylesheets/style.css">
+        <link rel='stylesheet' href="../stylesheets/profile.css">
+    </head>
+    <body>
+
+<?php include_layout_template('navigationUser.php'); ?>
 
 <div id="wrapper">
     <section id="main">
@@ -13,10 +21,10 @@ if (!$session->is_logged_in()) {
 
             <div id="avatar">
 
-                <h2>User Name</h2>				<!-- seek with php-->
+                <h2><?php echo USER::find_by_id($session->user_id)->name ?></h2>				<!-- seek with php-->
                 <br/>
                 <span class="avatarImage" >
-                    <img src="image/user.png">
+                    <img src="../images/user.png">
                 </span>
                 <br/><br/>
             </div>
@@ -29,8 +37,9 @@ if (!$session->is_logged_in()) {
                 <h3>Fecha de Creaci&oacute;n</h3>
                 <p>xx-xx-xxxx</p>				<!-- seek with php-->
                 <br/>
-                <a href="#" >Ver Perfil</a><br/><br/>
-                <a href="#" >Editar Perfil</a>
+                <div>
+                    <input type="submit" value="Editar Perfil" />
+                </div>
 
             </div>
 

@@ -1,21 +1,28 @@
-<nav>
-    <div id="navMenu">
-        <ul>
-            <li> <a href="#">Home</a> 
-                <ul>
-                    <li><a href="#">Dropdown item 1</a></li>
-                    <li><a href="#">Dropdown item 2</a></li>
-                </ul>
-            </li>
 
-            <li> <a href="#">About</a> 
-                <ul>
-                    <li><a href="#">Dropdown item 1</a></li>
-                    <li><a href="#">Dropdown item 2</a></li>
-                </ul>
-            </li>
-            <li> <a href="#">Post</a> </li>
-            <li> <a href="#">Contact</a> </li>
-        </ul>
+
+<nav id="mainMenu">
+    <div class="menu">
+        <a class="navIcon" href="index.html"><img title="Index" alt="Index" src="../images/home.png" width="22" height="22"/></a>
+        <div class="navVerticalDivision"></div>
+        <div class="navLeftItem">
+            <form method="get" action="/search" id="search">
+                <input name="q" type="text" size="40" placeholder="Buscar..." />
+            </form>
+        </div>
+
+        <div class="navRightItem">
+            <a class="navIcon" href="#">perf</a>
+
+            <div class="navVerticalDivision"></div>
+
+            <a class="navIcon" href="#">
+                <img title="Configuracion" alt="Configuracion" src="../images/settings.png" width="22" height="22" /></a>
+
+            <div class="navVerticalDivision"></div>
+
+            <a class="navIcon" href="#"><img title="Salir" alt="Salir" src="../images/logout.png" width="22" height="22" /></a>
+
+        </div>
+
     </div>
 </nav>

@@ -1,21 +1,21 @@
-<nav>
-    <div id="navMenu">
-        <ul>
-            <li> <a href="#">Home</a> 
-                <ul>
-                    <li><a href="#">Dropdown item 1</a></li>
-                    <li><a href="#">Dropdown item 2</a></li>
-                </ul>
-            </li>
+<nav id="mainMenu">
+    <div class="menu">
 
-            <li> <a href="#">About</a> 
-                <ul>
-                    <li><a href="#">Dropdown item 1</a></li>
-                    <li><a href="#">Dropdown item 2</a></li>
-                </ul>
-            </li>
-            <li> <a href="#">Post</a> </li>
-            <li> <a href="#">Contact</a> </li>
+        <a class="navIcon" href="index.php"><img title="Index" alt="Index" src="images/home.png" width="22" height="22"/></a>
+
+        <div class="navVerticalDivision"></div>
+
+        <div class="navLeftItem">
+            <form method="get" action="/search" id="search">
+                <input name="q" type="text" size="40" placeholder="Buscar..." />
+            </form>
+        </div>
+
+        <ul class="navRightItem">
+
+            <li class="navIcon"> <a href="about.html">About</a></li>
+            <li class="navIcon"> <a href="#">Contact</a> </li>
+
         </ul>
     </div>
 </nav>
