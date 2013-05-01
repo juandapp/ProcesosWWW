@@ -13,7 +13,7 @@
         $usuario = new User();
         $usuario->name = "Ramiro";
         echo $usuario->name;
-        $usuarioConsulta = User::find_by_id(11);
+        $usuarioConsulta = User::find_by_id(1);
         echo "retorno base datos" . $usuarioConsulta->idUser . " " . $usuarioConsulta->name . " " . $usuarioConsulta->password;
         ?>
 

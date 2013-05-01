@@ -1,6 +1,5 @@
 <?php require_once('../config/config.inc.php'); ?>
 <?php require_once('../data/mysqldatabase.php'); ?>
-
 <?php include_once('../model/user.model.php'); ?>
 <?php
 
