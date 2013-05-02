@@ -10,7 +10,7 @@ if ($session->is_logged_in()) {
 <div id="wrapper">
     <section id="main">
 
-        <aside id="login">
+        <aside id="login" class="login">
             <form action=../includes/controller/user.controller.php method="post">
                 <h3>Login</h3>
                 <div>
@@ -23,6 +23,7 @@ if ($session->is_logged_in()) {
                     <input type="submit" value="Login" name="login" />
                 </div>
             </form>
+            <a href="user/registerUser.php">si no tienes cuenta, registrate :D</a>
         </aside>
     </section>
 </div>

@@ -28,4 +28,23 @@ if (isset($_POST['login'])) { // Form has been submitted.
     $password = "";
 }
 
+
+if (isset($_POST['register'])) { // Form has been submitted.
+    $name = trim($_POST['name']);
+    $lastname = trim($_POST['lastname']);
+    $email = trim($_POST['email']);
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+
+    $user = new User($name, $lastname, $email, $username, $password);
+    $user->save();
+    
+    redirect_to("../../public/index.php");
+} else { // Form has not been submitted.
+    $username = "";
+    $password = "";
+}
+
+
+
 ?>

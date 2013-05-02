@@ -10,6 +10,14 @@ class User {
     private $last_name;
     private $creation_date;
 
+      public function __construct($name = "", $last_name= "", $email= "", $username= "", $password= "") {
+        $this->username = $username;
+        $this->password = $password;
+        $this->name = $name;
+        $this->email = $email;
+        $this->last_name = $last_name;
+    }
+
     public function __set($name, $value) {
         $this->$name = $value;
     }
@@ -19,7 +27,10 @@ class User {
     }
 
     public function save() {
-        
+        global $database;
+        $sql = "INSERT INTO user (name , last_name, email, username, password) VALUES ";
+        $sql .= "('" . $this->name . "','" . $this->last_name . "','" . $this->email . "','" . $this->username . "','" . $this->password . "')";
+        $result_set = $database->query($sql);
     }
 
     public static function authenticate($username = "", $password = "") {
