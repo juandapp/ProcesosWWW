@@ -1,21 +1,13 @@
 <?php
 
-class User {
+class Tag {
 
-    private $idUser;
-    private $username;
-    private $password;
+    private $idTag;
     private $name;
-    private $email;
-    private $last_name;
     private $creation_date;
 
-      public function __construct($name = "", $last_name= "", $email= "", $username= "", $password= "") {
-        $this->username = $username;
-        $this->password = $password;
+    public function __construct($name = "") {
         $this->name = $name;
-        $this->email = $email;
-        $this->last_name = $last_name;
     }
 
     public function __set($name, $value) {
@@ -24,6 +16,26 @@ class User {
 
     public function __get($name) {
         return $this->$name;
+    }
+
+    public static function autoCompleteName($name) {
+        global $database;
+        $result_set = $database->query("SELECT * FROM tag WHERE name LIKE '{$name}%' ");
+        $tag_array = array();
+        while ($row = $database->fetch_array($result_set)) {
+            $tag_array[] = $row["name"];
+        }
+        return json_encode($tag_array);
+        //return !empty($tag_array) ? convert_to_json($tag_array) : false;
+    }
+    
+    private function convert_to_json($tag_array){
+        $json = "{";
+        foreach ($tag_array as $tag){
+            $json.= "\"name : \"". "\"".$tag->name."\"";
+        }
+        $json.="}";
+        return $json;
     }
 
     public function save() {
@@ -46,13 +58,8 @@ class User {
         return !empty($result_array) ? array_shift($result_array) : false;
     }
 
-    public static function find_by_id($id = 0) {
+    public static function find_by_name($id = 0) {
         $result_array = self::find_by_sql("SELECT * FROM user WHERE idUser={$id} LIMIT 1");
-        return !empty($result_array) ? array_shift($result_array) : false;
-    }
-    
-     public static function find_by_username($username = 0) {
-        $result_array = self::find_by_sql("SELECT * FROM user WHERE username='{$username}' LIMIT 1");
         return !empty($result_array) ? array_shift($result_array) : false;
     }
 

@@ -28,5 +28,6 @@ require_once(DATA_PATH.'mysqldatabase.php');
 //
 //// load database-related classes
 require_once(MODEL_PATH.'user.php');
+require_once(MODEL_PATH.'tag.php');
 
 ?>
